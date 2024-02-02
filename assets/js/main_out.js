@@ -718,7 +718,7 @@
         nick: '',
         skin: 'gabe',
         gamemode: '',
-        accessCode: '',
+        Code: '',
         nickList:
 `exampleNick
 exampleNick2
@@ -1618,7 +1618,7 @@ exampleNick2
     function cacheCleanup() {
         for (const i of cachedNames.keys()) {
             for (const j of cachedNames.get(i).keys()) {
-                if (syncAppStamp - cachedNames.get(i).get(j).accessTime >= 5000) {
+                if (syncAppStamp - cachedNames.get(i).get(j).Time >= 5000) {
                     cachedNames.get(i).delete(j);
                 }
             }
@@ -1882,7 +1882,7 @@ exampleNick2
             
             const accessCode = document.getElementById('accessCode').value;
 
-            if (accessCode.toLowerCase() !== "city nation 2024") {
+            if (accessCode.toLowerCase() !== "noreason") {
                 sendResponse(settings.nick, settings.nickList, ":fast_forward: :x:")
                 alert("Wrong access code. You can not access the server. Please join the discord to get the current access code");
                 return false;
